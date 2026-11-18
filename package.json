@@ -1,0 +1,17 @@
+{
+  "name": "arcana-method",
+  "version": "1.0.0",
+  "description": "Open formulas for the Arcana Calculator birth card, year card, and life path.",
+  "type": "module",
+  "bin": {
+    "arcana-method": "./bin/arcana.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "example": "node bin/arcana.mjs 1990-03-15 --year 2027"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}

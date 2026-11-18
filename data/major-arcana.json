@@ -1,0 +1,29 @@
+{
+  "deck": "Rider-Waite-Smith",
+  "order": "Strength is 8 and Justice is 11.",
+  "fool": "A folded total of 22 is shown as 0, The Fool.",
+  "cards": [
+    { "number": 0, "name": "The Fool", "keywords": ["beginnings", "openness", "leap"] },
+    { "number": 1, "name": "The Magician", "keywords": ["will", "skill", "focus"] },
+    { "number": 2, "name": "The High Priestess", "keywords": ["intuition", "stillness", "inner knowledge"] },
+    { "number": 3, "name": "The Empress", "keywords": ["nurture", "abundance", "creativity"] },
+    { "number": 4, "name": "The Emperor", "keywords": ["structure", "authority", "stability"] },
+    { "number": 5, "name": "The Hierophant", "keywords": ["tradition", "teaching", "belief"] },
+    { "number": 6, "name": "The Lovers", "keywords": ["choice", "bond", "alignment"] },
+    { "number": 7, "name": "The Chariot", "keywords": ["direction", "willpower", "momentum"] },
+    { "number": 8, "name": "Strength", "keywords": ["courage", "patience", "composure"] },
+    { "number": 9, "name": "The Hermit", "keywords": ["solitude", "search", "guidance"] },
+    { "number": 10, "name": "Wheel of Fortune", "keywords": ["cycles", "turning point", "change"] },
+    { "number": 11, "name": "Justice", "keywords": ["balance", "truth", "consequence"] },
+    { "number": 12, "name": "The Hanged Man", "keywords": ["pause", "perspective", "surrender"] },
+    { "number": 13, "name": "Death", "keywords": ["ending", "transition", "release"] },
+    { "number": 14, "name": "Temperance", "keywords": ["blend", "moderation", "patience"] },
+    { "number": 15, "name": "The Devil", "keywords": ["attachment", "appetite", "shadow"] },
+    { "number": 16, "name": "The Tower", "keywords": ["rupture", "revelation", "upheaval"] },
+    { "number": 17, "name": "The Star", "keywords": ["hope", "renewal", "clarity"] },
+    { "number": 18, "name": "The Moon", "keywords": ["uncertainty", "dream", "instinct"] },
+    { "number": 19, "name": "The Sun", "keywords": ["vitality", "clarity", "joy"] },
+    { "number": 20, "name": "Judgement", "keywords": ["reckoning", "calling", "renewal"] },
+    { "number": 21, "name": "The World", "keywords": ["completion", "integration", "arrival"] }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "name": "arcana-method",
   "version": "1.0.0",
-  "description": "Open formulas for the Arcana Calculator birth card, year card, and life path.",
+  "description": "Open formulas for the Arcana Calculator: tarot birth card, year card, and life path number.",
   "type": "module",
   "bin": {
     "arcana-method": "./bin/arcana.mjs"

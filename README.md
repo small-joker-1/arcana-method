@@ -1,10 +1,18 @@
-# Arcana method
+# Arcana Calculator
 
-Open formulas for three calculations on [Arcana Calculator](https://arcanacalculator.com): the tarot birth card, the year card, and the life path number.
+Open formulas for the [Arcana Calculator](https://arcanacalculator.com): a tarot birth card from your date of birth, a major-arcana year card for any calendar year, and a life path number that keeps the master numbers 11, 22, and 33.
 
-This repository is the math, the 22 major-arcana names, and a small command-line program. Readings, accounts, and the website itself stay on the site.
+[![Arcana Calculator home page, where a birth date maps to one of the 22 major arcana](docs/arcana-calculator.png)](https://arcanacalculator.com)
 
-## Try it
+The website runs these calculations in the browser, in several languages, and shows the card. This repository is the arithmetic, so you can run the same numbers locally and check the result. Readings, accounts, and the site source are not included.
+
+| Calculator | What it uses | Open it |
+| --- | --- | --- |
+| [Birth card](https://arcanacalculator.com/tarot-birth-card-calculator) | Every digit of `YYYYMMDD`, folded to the 22 major arcana | [Tarot birth card by date of birth](https://arcanacalculator.com/tarot-birth-card-calculator) |
+| [Year card](https://arcanacalculator.com/year-card-calculator) | Birth month, birth day, and the digits of a target year | [Year card calculator](https://arcanacalculator.com/year-card-calculator) |
+| [Life path](https://arcanacalculator.com/life-number-calculator) | Month, day, and year reduced separately, keeping 11, 22, and 33 | [Life number calculator](https://arcanacalculator.com/life-number-calculator) |
+
+## Run the formulas
 
 Requires Node.js 18 or newer.
 
@@ -26,6 +34,8 @@ npm test
 
 ## Birth card
 
+[![Birth card calculator: a date of birth reduced to one major arcana card](docs/birth-card-calculator.png)](https://arcanacalculator.com/tarot-birth-card-calculator)
+
 Add every digit of the birth date written as `YYYYMMDD`. While the total is above 22, replace it with the sum of its digits. A result of 22 is shown as **0, The Fool**.
 
 March 15, 1990:
@@ -37,22 +47,22 @@ March 15, 1990:
 
 10 is Wheel of Fortune.
 
-July 18, 1996, the example from the site's calculation notes:
+July 18, 1996:
 
 ```text
 1 + 9 + 9 + 6 + 0 + 7 + 1 + 8 = 41
 4 + 1 = 5
 ```
 
-5 is The Hierophant.
+5 is The Hierophant. January 29, 1900 sums to 22 and is shown as The Fool.
 
-January 29, 1900 sums to 22 and is shown as The Fool.
-
-The interactive version: <https://arcanacalculator.com/tarot-birth-card-calculator>
+Check a date in the [birth card calculator](https://arcanacalculator.com/tarot-birth-card-calculator).
 
 ## Year card
 
-Add the birth month, the birth day, and the digits of the target year. Wrap the total onto the 22 cards with `((total - 1) % 22) + 1`. A wrapped 22 is shown as **0, The Fool**.
+[![Year card calculator: birth month and day plus a target year, wrapped onto the 22 major arcana](docs/year-card-calculator.webp)](https://arcanacalculator.com/year-card-calculator)
+
+Add the birth month, the birth day, and the digits of the target year. The birth year is not used. Wrap the total onto the 22 cards with `((total - 1) % 22) + 1`. A wrapped 22 is shown as **0, The Fool**.
 
 The personal year uses the same total, reduced until it is a single digit from 1 to 9. This reduction does not keep 11 or 22.
 
@@ -67,9 +77,11 @@ March 15, for 2027 (`2 + 0 + 2 + 7 = 11`):
 
 This wrap is not the birth-card digit sum. A total of 23 is birth-card 5 (`2 + 3`) and year-card 1 (`((23 - 1) % 22) + 1`).
 
-The interactive version: <https://arcanacalculator.com/year-card-calculator>
+Check a year in the [year card calculator](https://arcanacalculator.com/year-card-calculator).
 
 ## Life path
+
+[![Life number calculator: a birth date reduced to a life path number, including master numbers](docs/life-number-calculator.png)](https://arcanacalculator.com/life-number-calculator)
 
 Reduce the month, the day, and the year separately. Keep 11, 22, and 33 when they appear. Add the three results and reduce that sum the same way.
 
@@ -86,7 +98,7 @@ November 2, 1998 stays at master number 22: month 11, day 2, year `1 + 9 + 9 + 8
 
 November 11, 2009 is 33: month 11, day 11, year `2 + 0 + 0 + 9 = 11`, then `11 + 11 + 11 = 33`.
 
-The interactive version: <https://arcanacalculator.com/life-number-calculator>
+Check a date in the [life number calculator](https://arcanacalculator.com/life-number-calculator).
 
 ## Cards
 
@@ -94,11 +106,13 @@ The interactive version: <https://arcanacalculator.com/life-number-calculator>
 
 ## 中文说明
 
-这是 [Arcana Calculator](https://arcanacalculator.com) 三套计算器的公开算法，不含解读文案、账号和网站源码。
+[Arcana Calculator](https://arcanacalculator.com) 用出生日期计算大阿卡纳出生牌、任意年份的年运牌，以及保留 11、22、33 的生命灵数。上面的图就是网站首页和三个计算器的页面。
 
-- 出生牌：把 `YYYYMMDD` 的每位数字相加，大于 22 就继续相加；得到 22 时显示为 0，愚者。
-- 年运牌：出生月 + 出生日 + 目标年各位数字之和，再用 `((总数 - 1) % 22) + 1` 折进 22 张牌；22 显示为 0。个人年把同一个总数约成 1–9。
-- 生命灵数：月、日、年分别约简，保留 11、22、33，三者相加后再约简一次。
+- [出生牌计算器](https://arcanacalculator.com/tarot-birth-card-calculator)：把 `YYYYMMDD` 的每位数字相加，大于 22 就继续相加；得到 22 时显示为 0，愚者。
+- [年运牌计算器](https://arcanacalculator.com/year-card-calculator)：出生月 + 出生日 + 目标年各位数字之和，再用 `((总数 - 1) % 22) + 1` 折进 22 张牌；22 显示为 0。个人年把同一个总数约成 1–9。
+- [生命灵数计算器](https://arcanacalculator.com/life-number-calculator)：月、日、年分别约简，保留 11、22、33，三者相加后再约简一次。
+
+本仓库只包含这三套算法、牌名和本地脚本。解读文案、账号和网站源码不在这里。
 
 ## License
 

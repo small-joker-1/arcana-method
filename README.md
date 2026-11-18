@@ -81,7 +81,7 @@ Check a year in the [year card calculator](https://arcanacalculator.com/year-car
 
 ## Life path
 
-[![Life number calculator: a birth date reduced to a life path number, including master numbers](docs/life-number-calculator.png)](https://arcanacalculator.com/life-number-calculator)
+[![Life number calculator: a birth date reduced to a life path number, including master numbers](docs/life-number-calculator.webp)](https://arcanacalculator.com/life-number-calculator)
 
 Reduce the month, the day, and the year separately. Keep 11, 22, and 33 when they appear. Add the three results and reduce that sum the same way.
 
